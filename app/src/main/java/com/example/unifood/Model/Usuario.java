@@ -1,14 +1,20 @@
 package com.example.unifood.Model;
 
+import android.widget.EditText;
+
 public class Usuario {
     private String nome;
     private String email;
-    private String Senha;
+    private String senha;
 
     public Usuario(String nome, String email, String senha) {
         this.nome = nome;
         this.email = email;
-        Senha = senha;
+        this.senha = senha;
+    }
+
+    public Usuario() {
+
     }
 
     public String getNome() {
@@ -28,10 +34,19 @@ public class Usuario {
     }
 
     public String getSenha() {
-        return Senha;
+        return senha;
     }
 
     public void setSenha(String senha) {
-        Senha = senha;
+        this.senha = senha;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "nome='" + nome + '\'' +
+                ", email='" + email + '\'' +
+                ", senha='" + senha + '\'' +
+                '}';
     }
 }
