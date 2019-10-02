@@ -53,12 +53,21 @@ public class RepositorioUsuario implements IRepositorioUsuario{
     @Override
     public Usuario pesquisaUsuario(String email) {
         Usuario usuario= null;
-
+        for (int i = 0;i <this.usuarioArrayList.size() ; i++) {
+            if ((this.usuarioArrayList.get(i).getEmail().equals(email))){
+                usuario = usuarioArrayList.get(i);
+                break;
+            }
+        }
+        if (usuario == null){
+            System.out.println("Usuario nao encontrado");
+        }
         return null;
     }
 
     @Override
-    public List listarUsuarios() {
-        return null;
+    public ArrayList listarUsuarios() {
+        return usuarioArrayList;
     }
+
 }

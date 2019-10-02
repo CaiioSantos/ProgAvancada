@@ -3,7 +3,7 @@ package com.example.unifood.Repository;
 import com.example.unifood.Model.Usuario;
 
 
-import java.util.List;
+import java.util.ArrayList;
 
 public interface IRepositorioUsuario {
 
@@ -11,6 +11,6 @@ public interface IRepositorioUsuario {
     void atualizarUsuario (Usuario usuario);
     void deletarUsuario (Usuario usuario);
     Usuario  pesquisaUsuario(String email);
-    List listarUsuarios();
+    ArrayList listarUsuarios();
 
 }
