@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.unifood.Controller.UsuarioController;
 import com.example.unifood.Model.Usuario;
@@ -20,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Usuario> usuarioArrayList;
     UsuarioController usuarioController;
     Usuario usuario;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
 
         edtlogin = findViewById(R.id.EtLogin);
@@ -33,16 +34,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void btnLongin(View view) {
+    public void btnLogin(View view) {
         Usuario usuario = new Usuario();
         if (usuarioController.loginUsuario(usuario)){
+
             Intent login =  new Intent(getApplicationContext(),ListaVendedor.class);
             startActivity(login);
         }
     }
 
+
     public void tRegister(View view) {
-        Intent cadastro =  new Intent(getApplicationContext(),Cadastro.class);
-        startActivity(cadastro);
+        Intent t = new Intent(getApplicationContext(), Cadastro.class);
+        startActivity(t);
     }
 }

@@ -8,8 +8,6 @@ import android.widget.EditText;
 
 public class Cadastro extends AppCompatActivity {
 
-    EditText edtNome = findViewById(R.layout.activity_cadastro);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
