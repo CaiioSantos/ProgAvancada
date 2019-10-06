@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Usuario> usuarioArrayList;
     UsuarioController usuarioController;
     Usuario usuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,24 +29,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         edtlogin = findViewById(R.id.EtLogin);
-        edtpassword =  findViewById(R.id.EtPassword);
+        edtpassword = findViewById(R.id.EtPassword);
 
 
-    }
-
-
-    public void btnLogin(View view) {
-        Usuario usuario = new Usuario();
-        if (usuarioController.loginUsuario(usuario)){
-
-            Intent login =  new Intent(getApplicationContext(),ListaVendedor.class);
-            startActivity(login);
-        }
     }
 
 
     public void tRegister(View view) {
         Intent t = new Intent(getApplicationContext(), Cadastro.class);
         startActivity(t);
+    }
+
+    public void BtnLogin(View view) {
+        if (usuarioController.loginUsuario(usuario)) {
+            Intent login = new Intent(getApplicationContext(), ListaVendedor.class);
+            startActivity(login);
+        }
     }
 }

@@ -71,14 +71,14 @@
         android:hint="Password"
         android:textSize="22dp"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/BtnLogin"
+        app:layout_constraintBottom_toTopOf="@+id/BtnRegister"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EtEmail" />
 
     <Button
-        android:id="@+id/BtnLogin"
+        android:id="@+id/BtnRegister"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/button_login"
@@ -90,7 +90,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EtPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/EtPassword"
+        android:onClick="BtnRegister"/>
 
     <TextView
         android:id="@+id/TvBack"
@@ -104,7 +105,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BtnLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/BtnRegister" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
