@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">UNIFOOD</string>
     <string name="user_name">username</string>
+<<<<<<< HEAD
     <string name="register">Register</string>
     <string name="login">Login</string>
+=======
+>>>>>>> DanilloBranch
 </resources>

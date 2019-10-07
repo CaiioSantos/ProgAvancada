@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     public void tRegister(View view) {
         Intent t = new Intent(getApplicationContext(), Cadastro.class);
         startActivity(t);
+<<<<<<< HEAD
     }
 
     public void BtnLogin(View view) {
@@ -49,4 +50,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void BtnRegister(View view) {
     }
+=======
+    }
+
+    public void BtnLogin(View view) {
+        if (usuarioController.loginUsuario(usuario)) {
+            Intent login = new Intent(getApplicationContext(), ListaVendedor.class);
+            startActivity(login);
+        }
+    }
+>>>>>>> DanilloBranch
 }
