@@ -46,4 +46,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(login);
         }
     }
+
+    public void BtnRegister(View view) {
+    }
 }
