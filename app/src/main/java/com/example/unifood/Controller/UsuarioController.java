@@ -61,6 +61,10 @@ public class UsuarioController implements IUsuarioController {
         return this.repositorioUsuario.pesquisaUsuario(email);
     }
 
+    public Boolean acharUsuario (Usuario usuario){
+        return  this.repositorioUsuario.acharUsuario(usuario);
+    }
+
     @Override
     public ArrayList<Usuario> listaUsuario() {
         return this.repositorioUsuario.listarUsuarios();
