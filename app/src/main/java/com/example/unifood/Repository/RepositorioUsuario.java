@@ -65,6 +65,21 @@ public class RepositorioUsuario implements IRepositorioUsuario{
         return null;
     }
 
+
+    public Boolean acharUsuario (Usuario usuario){
+
+        for (int i = 0; i <usuarioArrayList.size() ; i++) {
+            if (usuarioArrayList.get(i).getNome().equals(usuario.getNome()) && usuarioArrayList.get(i).getSenha().equals(usuario.getSenha())){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        return false;
+    }
+
+
+
     @Override
     public ArrayList listarUsuarios() {
         return usuarioArrayList;

@@ -47,7 +47,7 @@ public class UsuarioController implements IUsuarioController {
     @Override
     public boolean loginUsuario(Usuario usuario) {
         for (int i = 0; i <usuarioArrayList.size() ; i++) {
-            if (usuarioArrayList.get(i).getEmail().equals(usuario.getEmail()) && usuarioArrayList.get(i).getSenha().equals(usuario.getSenha())){
+            if (usuarioArrayList.get(i).getNome().equals(usuario.getNome()) && usuarioArrayList.get(i).getSenha().equals(usuario.getSenha())){
                 return true;
             }else {
                 return false;
@@ -59,6 +59,10 @@ public class UsuarioController implements IUsuarioController {
     @Override
     public Usuario pesquisarUsuario(String email) {
         return this.repositorioUsuario.pesquisaUsuario(email);
+    }
+
+    public Boolean acharUsuario (Usuario usuario){
+        return  this.repositorioUsuario.acharUsuario(usuario);
     }
 
     @Override
