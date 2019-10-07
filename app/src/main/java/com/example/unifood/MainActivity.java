@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void BtnLogin(View view) {
-        if (usuarioController.loginUsuario(usuario)) {
+
             Intent login = new Intent(getApplicationContext(), ListaVendedor.class);
             startActivity(login);
         }
-    }
+
 }

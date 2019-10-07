@@ -20,7 +20,7 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-       android:hint="Username"
+        android:hint="Username"
         android:textSize="22dp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/EtEmail"
@@ -82,7 +82,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/button_login"
-        android:text="Register"
+        android:text="@string/register"
         android:textColor="#000000"
 
         android:textSize="18sp"
@@ -91,7 +91,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EtPassword"
-        android:onClick="BtnRegister"/>
+        android:onClick="tRegister"/>
 
     <TextView
         android:id="@+id/TvBack"
