@@ -1,7 +1,5 @@
 package com.example.unifood;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +8,8 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class ListaVendedor extends AppCompatActivity {
 
     ListView vListView;
@@ -17,14 +17,10 @@ public class ListaVendedor extends AppCompatActivity {
     int [] images = {R.drawable.image1,
             R.drawable.image2,
             R.drawable.image3,
-            R.drawable.image4,
-            R.drawable.image3,
-            R.drawable.image3};
+            R.drawable.image4};
 
     String [] names = {"Salgados do Caio",
-            "Salgadinhos Diego & Ferraz",
-            "Doces do Mourcout",
-            "Doces do Mourcout",
+            "Salgados SW",
             "Doces do Mourcout",
             "Doces do Mourcout"};
 
@@ -61,7 +57,7 @@ public class ListaVendedor extends AppCompatActivity {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
-            View view = getLayoutInflater().inflate(R.layout.activity_lista_vendedor, null);
+            View view = getLayoutInflater().inflate(R.layout.customlayout, null);
 
             ImageView vImageView = view.findViewById(R.id.imageView);
             TextView vTextView = view.findViewById(R.id.textView);
