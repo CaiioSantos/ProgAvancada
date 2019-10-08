@@ -8,8 +8,6 @@ public interface IUsuarioController {
     void adicionarUsuario(Usuario usuario);
     void deletarUsuario(Usuario usuario);
     void atualizar(Usuario usuario);
-    boolean loginUsuario (Usuario usuario);
-    Usuario pesquisarUsuario(String email);
     Boolean acharUsuario (Usuario usuario);
     ArrayList<Usuario> listaUsuario();
 }
