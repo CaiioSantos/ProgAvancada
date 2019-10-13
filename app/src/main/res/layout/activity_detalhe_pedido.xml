@@ -4,4 +4,140 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.DetalhePedido"/>
+    android:background="@drawable/notpad_background"
+    tools:context=".Activity.DetalhePedido">
+
+    <TextView
+        android:id="@+id/txData"
+        android:layout_width="363dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="318dp"
+        android:layout_marginBottom="359dp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="Data"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txDataPedido1"
+        android:layout_width="221dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="140dp"
+        android:fontFamily="casual"
+        android:text="Data do Pedido:"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/txData"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txNome" />
+
+    <TextView
+        android:id="@+id/txNomeLoja"
+        android:layout_width="205dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="158dp"
+        android:fontFamily="casual"
+        android:text="Nome da Loja:"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/txNome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txNome"
+        android:layout_width="353dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginBottom="503dp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="Nome"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txNumeroPedido2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Número do pedido:"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/txNumero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txData"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <TextView
+        android:id="@+id/txNumero"
+        android:layout_width="363dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="454dp"
+        android:layout_marginBottom="237dp"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="Numero"
+        android:textColor="#000000"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgTraco"
+        android:layout_width="519dp"
+        android:layout_height="228dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txNumero"
+        app:srcCompat="@drawable/traco2" />
+
+    <TextView
+        android:id="@+id/txValor"
+        android:layout_width="109dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="574dp"
+        android:layout_marginBottom="117dp"
+        android:fontFamily="casual"
+        android:text="valor"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgTraco"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgTraco"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txValorTotal"
+        android:layout_width="165dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="196dp"
+        android:fontFamily="casual"
+        android:text="Valor total:"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/txValor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txNumero" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

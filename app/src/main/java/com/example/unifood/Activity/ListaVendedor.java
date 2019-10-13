@@ -2,6 +2,8 @@ package com.example.unifood.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -50,8 +52,29 @@ public class ListaVendedor extends AppCompatActivity {
                 Descricao.putExtra("imagemLoja",images[position]);
               startActivity(Descricao);
 
+
             }
         });
+    }
+
+
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.mymenu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.mybutton) {
+            Intent Historico = new Intent(getApplicationContext(), HistoricoPedido.class);
+            startActivity(Historico);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 
