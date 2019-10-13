@@ -9,18 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetalhePedido"></activity>
-        <activity android:name=".HistoricoPedido" />
-        <activity android:name=".DescricaoVendedor" />
-        <activity android:name=".ListaVendedor" />
-        <activity android:name=".Cadastro" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.DetalhePedido"></activity>
+        <activity android:name=".Activity.HistoricoPedido" />
+        <activity android:name=".Activity.DescricaoVendedor" />
+        <activity android:name=".Activity.ListaVendedor" />
+        <activity android:name=".Activity.Cadastro" />
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

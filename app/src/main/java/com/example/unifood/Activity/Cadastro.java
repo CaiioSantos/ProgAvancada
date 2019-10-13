@@ -1,10 +1,9 @@
-package com.example.unifood;
+package com.example.unifood.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,8 +14,7 @@ import android.widget.Toast;
 import com.example.unifood.Controller.UsuarioController;
 import com.example.unifood.Fachada.Fachada;
 import com.example.unifood.Model.Usuario;
-
-import org.w3c.dom.Text;
+import com.example.unifood.R;
 
 import java.util.ArrayList;
 

@@ -4,29 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     android:orientation="vertical"
-    tools:context=".DescricaoVendedor"
-    android:background="@drawable/gradient"    >
+    tools:context=".Activity.DescricaoVendedor">
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="378dp"
-        android:layout_height="250dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="29dp"
-        tools:srcCompat="@tools:sample/avatars" />
     <TextView
         android:id="@+id/textTituloDetalhe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="@font/supermercado_one"
+        android:gravity="center"
         android:text="@string/titulo"
-        android:textSize="16sp" />
+        android:textColor="#2B2B2B"
+        android:textSize="40sp" />
+
+    <ImageView
+        android:id="@+id/imageDescricao"
+        android:layout_width="357dp"
+        android:layout_height="151dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="20dp"
+        android:foregroundGravity="right" />
 
     <TextView
         android:id="@+id/textPrecoDetalhe"
@@ -35,7 +38,8 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:paddingBottom="8dp"
-        android:text="R$ 250"
+        android:text="  Caio Henrrique da Silva"
+        android:textColor="#200D0D"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -53,7 +57,9 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:padding="8dp"
-        android:text="SP" />
+        android:text="Telefone: (81)-988514923"
+        android:textColor="#200D0D"
+        android:textSize="20dp" />
 
     <View
         android:layout_width="match_parent"
@@ -64,12 +70,14 @@
     <TextView
         android:id="@+id/textDescricaoDetalhe"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="64dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:paddingBottom="10dp"
         android:paddingTop="8dp"
-        android:text="Descricao" />
+        android:paddingBottom="10dp"
+        android:text="Coxinha - R$ 2,00                                                                                                   Pizza - R$ 6,99"
+        android:textColor="#3C3F41"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/BtnLigar"
@@ -78,6 +86,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/button_login"
-        android:text="Ver telefone" />
+        android:text="Ligar para o vendedor" />
 
 </LinearLayout>
