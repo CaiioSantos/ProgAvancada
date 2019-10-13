@@ -8,8 +8,6 @@ import java.util.ArrayList;
 public class UsuarioController implements IUsuarioController {
         private static UsuarioController instacia;
         private RepositorioUsuario repositorioUsuario = RepositorioUsuario.getInstance();
-    private ArrayList<Usuario> usuarioArrayList;
-
 
     public UsuarioController (){
 
@@ -42,23 +40,6 @@ public class UsuarioController implements IUsuarioController {
     public void atualizar(Usuario usuario) {
             this.repositorioUsuario.atualizarUsuario(usuario);
 
-    }
-
-    @Override
-    public boolean loginUsuario(Usuario usuario) {
-        for (int i = 0; i <usuarioArrayList.size() ; i++) {
-            if (usuarioArrayList.get(i).getNome().equals(usuario.getNome()) && usuarioArrayList.get(i).getSenha().equals(usuario.getSenha())){
-                return true;
-            }else {
-                return false;
-            }
-        }
-        return false;
-    }
-
-    @Override
-    public Usuario pesquisarUsuario(String email) {
-        return this.repositorioUsuario.pesquisaUsuario(email);
     }
 
     public Boolean acharUsuario (Usuario usuario){

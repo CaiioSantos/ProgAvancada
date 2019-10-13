@@ -2,6 +2,8 @@ package com.example.unifood.Model;
 
 import android.widget.EditText;
 
+import com.example.unifood.Fachada.Fachada;
+
 public class Usuario {
     private String nome;
     private String email;
