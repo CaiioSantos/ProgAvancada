@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.unifood.Activity.DescricaoVendedor;
 import com.example.unifood.R;
 
 public class ListaVendedor extends AppCompatActivity {

@@ -2,7 +2,8 @@ package com.example.unifood.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -25,37 +26,54 @@ public class DescricaoVendedor extends AppCompatActivity {
     private TextView DescricaoDetalhe;
 
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Detalhes da Loja");
         setContentView(R.layout.activity_descricao_vendedor);
         Intent intent = getIntent();
+        inicializarComponentes();
 
 
         botaoLigar = findViewById(R.id.BtnLigar);
         botaoLigar.setOnClickListener(new View.OnClickListener() {
+
+
+            @Override
             public void onClick(View view) {
-                FazerChamada();
+                AlertDialog.Builder alerta = new AlertDialog.Builder(DescricaoVendedor.this);
+                alerta.setTitle("Confirmação de Chamada");
+                alerta.setIcon(R.mipmap.ic_aviso_ligacao)
+                        .setMessage("Deseja realizar a ligação?")
+                        .setCancelable(false)
+                        .setNegativeButton("CANCELAR", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                            }
+                        })
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                FazerChamada();
+                            }
+                        });
+                AlertDialog alertDialog = alerta.create();
+                alertDialog.show();
+
             }
+
         });
 
-        inicializarComponentes();
+
 
         String nomeDaLoja = intent.getStringExtra("nomeLoja");
         tituloDetalhe.setText(nomeDaLoja);
 
-        int imagemDaLoja = intent.getIntExtra("imagemLoja",0);
+        int imagemDaLoja = intent.getIntExtra("imagemLoja", 0);
         descricao.setImageResource(imagemDaLoja);
 
-
     }
-
-
-
-
 
     private void inicializarComponentes() {
         descricao = findViewById(R.id.imageDescricao);
@@ -71,12 +89,11 @@ public class DescricaoVendedor extends AppCompatActivity {
         Intent.setData(Uri.parse("tel:123456789"));
 
         if (ActivityCompat.checkSelfPermission(getApplicationContext(), CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(DescricaoVendedor.this, new String[] {CALL_PHONE},1);
+            ActivityCompat.requestPermissions(DescricaoVendedor.this, new String[]{CALL_PHONE}, 1);
 
             return;
         }
         startActivity(Intent);
-
 
     }
 }
