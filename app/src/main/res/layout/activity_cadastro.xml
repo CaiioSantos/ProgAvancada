@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
 
     <EditText
@@ -20,7 +20,7 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:hint="Username"
+        android:hint="@string/username"
         android:textSize="22dp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/EtEmail"
@@ -49,7 +49,7 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:hint="E-mail"
+        android:hint="@string/e_mail"
         android:textSize="22dp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/EtPassword"
@@ -68,7 +68,7 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="textPersonName"
-        android:hint="Password"
+        android:hint="@string/password"
         android:textSize="22dp"
         android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/BtnRegister"
@@ -98,7 +98,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="Back"
+        android:text="@string/back"
         android:textColor="#ffffff"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"

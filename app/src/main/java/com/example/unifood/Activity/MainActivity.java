@@ -1,32 +1,27 @@
-package com.example.unifood;
+package com.example.unifood.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
-
 import com.example.unifood.Controller.UsuarioController;
+import com.example.unifood.Fachada.Fachada;
 import com.example.unifood.Model.Usuario;
-
-import java.util.ArrayList;
+import com.example.unifood.R;
 
 public class MainActivity extends AppCompatActivity {
 
     EditText edtlogin;
     EditText edtpassword;
     Button BtnLogin;
-    private ArrayList<Usuario> usuarioArrayList;
     UsuarioController usuarioController;
-    Usuario usuario;
+
 
 
     @Override
@@ -38,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         edtlogin = findViewById(R.id.EtLogin);
         edtpassword = findViewById(R.id.EtPassword);
         BtnLogin = findViewById(R.id.BtnRegister);
-        usuarioController = new UsuarioController();
 
 
         BtnLogin.setOnClickListener(new View.OnClickListener() {
@@ -53,11 +47,13 @@ public class MainActivity extends AppCompatActivity {
                     if (!password.isEmpty()) {
 
                         Usuario usuario = new Usuario();
+                        Fachada fachada = Fachada.getInstance();
+
                         usuario.setNome(edtlogin.getText().toString());
                         usuario.setSenha(edtpassword.getText().toString());
 
 
-                        if(usuarioController.acharUsuario(usuario).equals(true)){
+                        if(fachada.acharUsuario(usuario).equals(true)){
 
                             Toast.makeText(MainActivity.this, "Logado com sucesso",
                                     Toast.LENGTH_SHORT).show();

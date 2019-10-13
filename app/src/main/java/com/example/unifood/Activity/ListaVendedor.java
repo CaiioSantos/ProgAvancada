@@ -1,14 +1,19 @@
-package com.example.unifood;
+package com.example.unifood.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.unifood.Activity.DescricaoVendedor;
+import com.example.unifood.R;
 
 public class ListaVendedor extends AppCompatActivity {
 
@@ -34,9 +39,23 @@ public class ListaVendedor extends AppCompatActivity {
         customAdaptor customAdapter = new customAdaptor();
         vListView.setAdapter(customAdapter);
 
+        vListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+
+                Intent Descricao = new Intent(getApplicationContext(), DescricaoVendedor.class);
+                Descricao.putExtra("nomeLoja",names[position]);
+                Descricao.putExtra("imagemLoja",images[position]);
+              startActivity(Descricao);
+
+            }
+        });
     }
 
-    class customAdaptor extends BaseAdapter{
+
+    class customAdaptor extends BaseAdapter {
 
 
         @Override

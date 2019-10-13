@@ -1,10 +1,9 @@
-package com.example.unifood;
+package com.example.unifood.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -13,9 +12,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.unifood.Controller.UsuarioController;
+import com.example.unifood.Fachada.Fachada;
 import com.example.unifood.Model.Usuario;
-
-import org.w3c.dom.Text;
+import com.example.unifood.R;
 
 import java.util.ArrayList;
 
@@ -42,6 +41,9 @@ public class Cadastro extends AppCompatActivity  {
         BtnRegister = findViewById(R.id.BtnRegister);
         TvBack = findViewById(R.id.TvBack);
 
+
+
+
         usuarioController = new UsuarioController();
 
         BtnRegister.setOnClickListener(new View.OnClickListener() {
@@ -50,16 +52,18 @@ public class Cadastro extends AppCompatActivity  {
 
 
                 Usuario usuario = new Usuario();
+                Fachada fachada = Fachada.getInstance();
+
                 usuario.setNome(edtNome.getText().toString());
                 usuario.setEmail(edtEmail.getText().toString());
                 usuario.setSenha(edtSenha.getText().toString());
 
 
-                try {
+                try  {
                     if(!usuario.getNome().isEmpty()&& !usuario.getEmail().isEmpty()&& !usuario.getEmail().isEmpty()) {
 
-                        if(usuarioController.acharUsuario(usuario).equals(false)){
-                            usuarioController.adicionarUsuario(usuario);
+                        if(fachada.acharUsuario(usuario).equals(false)){
+                            fachada.adicionarUsuario(usuario);
                             Toast.makeText(getApplicationContext(), "Usuario cadastrado",
                                     Toast.LENGTH_SHORT).show();
 
